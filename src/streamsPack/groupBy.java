@@ -18,7 +18,7 @@ public class groupBy {
 
         for(Map.Entry<String, List<Phone>> item : phonesByCompany.entrySet()){
 
-            System.out.println(item.getKey());
+            System.out.println(item.getKey()) ;
             for(Phone phone : item.getValue()){
 
                 System.out.println(phone.getName());
