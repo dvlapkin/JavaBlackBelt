@@ -1,1 +1,7 @@
 out
+*.iml
+*.xml
+*.html
+*.java
+tempFile
+adb.mdb
