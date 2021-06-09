@@ -30,7 +30,7 @@ class Market{
     }
 
     public synchronized void putBread(){
-        while (breakCount>=5){
+        while (breakCount>=15){
             try {
                 System.out.println("Ждём покупателей");
                 wait();
@@ -51,7 +51,7 @@ class Producer implements Runnable{
     }
     @Override
     public void run() {
-        for(int i=0;i<10;i++){
+        for(int i=0;i<100;i++){
         market.putBread();
         }
     }
@@ -65,7 +65,7 @@ class Consumer implements Runnable{
     @Override
     public void run() {
 
-        for(int i=0;i<10;i++){
+        for(int i=0;i<100;i++){
             market.getBread();
         }
     }
